@@ -217,14 +217,11 @@ public class Complex {
     @Override
     public int hashCode() {
         return Objects.hash(real, imaginary);
-    } //TODO
+    }
 
 
     @Override
-    public String toString() { //TODO
-        return "Complex{" +
-                "real=" + imaginary +
-                ", imaginary=" + imaginary +
-                '}';
+    public String toString() {
+        return "Complex{real="+real+", imaginary="+imaginary+"}";
     }
 }
