@@ -120,10 +120,10 @@ public class Complex {
      * @param factor the complex number to multiply to <code>this</code>
      * @return the complex number {@code this * factor}
      */
-    Complex multiply(Complex factor) { //TODO
+    Complex multiply(Complex factor) {
         return new Complex(
-                this.real * factor.real + this.imaginary * factor.imaginary,
-                this.real * factor.imaginary - this.imaginary * factor.real
+                this.real * factor.real - this.imaginary * factor.imaginary,
+                this.real * factor.imaginary + this.imaginary * factor.real
         );
     }
 
