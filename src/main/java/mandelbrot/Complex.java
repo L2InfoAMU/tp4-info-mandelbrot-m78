@@ -165,14 +165,14 @@ public class Complex {
      * @param divisor the denominator (a complex number)
      * @return the complex number <code>this / divisor</code>
      */
-    Complex divide(Complex divisor) { //TODO
-        if (divisor.equals(I)){
+    Complex divide(Complex divisor) { //TODO (ne marche pas ?)
+        if (divisor.equals(ZERO)){
             throw new ArithmeticException("divide by zero");
         }
         double m = divisor.squaredModulus();
         return new Complex(
-                (this.real + divisor.real + this.imaginary + divisor.imaginary) / m,
-                (this.imaginary * divisor.real - this.real * divisor.imaginary) / m
+                (this.real * divisor.real + this.imaginary * divisor.imaginary) / m,
+                (this.real * divisor.imaginary - this.imaginary * divisor.real) / m
         );
     }
 
