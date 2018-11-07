@@ -192,4 +192,18 @@ public class ComplexTest {
         assertEquals(new Complex(24.6,0), two.scale(12.3));
     }
 
+    @Test
+    void testEquals(){
+        int x = 10;
+        int y = -15;
+        Complex c1 = new Complex(x,y);
+        Complex c2 = new Complex(x,y);
+        Complex c3 = new Complex(x, -y);
+        Complex c4 = new Complex(-x, y);
+        String s = new String();
+        assertEquals(c1, c2);
+        assertNotEquals(c1, c3);
+        assertNotEquals(c2, c4);
+        assertNotEquals(c1, s);
+    }
 }
