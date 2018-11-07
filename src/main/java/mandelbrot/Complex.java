@@ -198,8 +198,8 @@ public class Complex {
      * @param lambda a scalar number
      * @return the complex number <code>lambda * this</code>
      */
-    public Complex scale(double lambda) { //TODO
-        return new Complex(lambda * real, lambda + imaginary);
+    public Complex scale(double lambda) {
+        return new Complex(lambda * real, lambda * imaginary);
     }
 
 
