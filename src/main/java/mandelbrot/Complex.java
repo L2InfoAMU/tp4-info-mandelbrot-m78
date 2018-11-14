@@ -183,7 +183,7 @@ public class Complex {
      * @param p a non-negative integer
      * @return the complex number <code>this ** p</code>
      */
-    Complex pow(int p) { //TODO
+    Complex pow(int p) {
         if (p == 0)
             return ZERO;
         Complex result = (this.multiply(this)).pow(p / 2);

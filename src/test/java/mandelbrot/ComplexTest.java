@@ -206,4 +206,37 @@ public class ComplexTest {
         assertNotEquals(c2, c4);
         assertNotEquals(c1, s);
     }
+
+    @Test
+    void testPow() {
+        assertEquals(new Complex(1,0), onePlusI.pow(0));
+        assertEquals(onePlusI, onePlusI.pow(1));
+        assertEquals(new Complex(0,2), onePlusI.pow(2));
+        assertEquals(new Complex(-2,2), onePlusI.pow(3));
+
+        assertEquals(new Complex(1,0), minusI.pow(0));
+        assertEquals(minusI, minusI.pow(1));
+        assertEquals(new Complex(-1,0), minusI.pow(2));
+        assertEquals(new Complex(0,1), minusI.pow(3));
+
+        assertEquals(new Complex(1,0), minusOne.pow(0));
+        assertEquals(minusOne, minusOne.pow(1));
+        assertEquals(new Complex(1,0), minusOne.pow(2));
+        assertEquals(new Complex(-1,0), minusOne.pow(3));
+
+        assertEquals(new Complex(1,0), oneMinusI.pow(0));
+        assertEquals(oneMinusI, oneMinusI.pow(1));
+        assertEquals(new Complex(0,-2), oneMinusI.pow(2));
+        assertEquals(new Complex(-2,-2), oneMinusI.pow(3));
+
+        assertEquals(new Complex(1,0), twoI.pow(0));
+        assertEquals(twoI, twoI.pow(1));
+        assertEquals(new Complex(-4,0), twoI.pow(2));
+        assertEquals(new Complex(0,-8), twoI.pow(3));
+
+        assertEquals(new Complex(1,0), two.pow(0));
+        assertEquals(two, two.pow(1));
+        assertEquals(new Complex(4,0), two.pow(2));
+        assertEquals(new Complex(8,0), two.pow(3));
+    }
 }
